@@ -90,12 +90,12 @@ export const ConceptsBento = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Wave Concepts Explorer</h2>
-          <p className="text-muted-foreground text-lg">
-            Interactive exploration of wave phenomena from NCERT Class 10
-          </p>
-        </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Wave Concepts Explorer</h2>
+            <p className="text-muted-foreground text-lg">
+              Interactive exploration of wave phenomena
+            </p>
+          </div>
 
         {/* Main Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
@@ -106,7 +106,7 @@ export const ConceptsBento = () => {
               <Waves className="text-primary" size={32} />
               <div>
                 <h3 className="text-2xl font-bold">Wave Motion</h3>
-                <Badge variant="outline">NCERT Class 10</Badge>
+                <Badge variant="outline">Physics</Badge>
               </div>
             </div>
             <p className="text-lg mb-4">

@@ -6,12 +6,12 @@ export const WaveTheory = () => {
   return (
     <section className="py-20 bg-muted/20">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Understanding Waves</h2>
-          <p className="text-muted-foreground text-lg">
-            Comprehensive theory based on NCERT Class 10 curriculum
-          </p>
-        </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Understanding Waves</h2>
+            <p className="text-muted-foreground text-lg">
+              Fundamental concepts of wave physics
+            </p>
+          </div>
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr">
@@ -138,31 +138,31 @@ export const WaveTheory = () => {
 
         {/* Key Learning Objectives */}
         <Card className="interactive-card p-6 mt-8">
-          <h3 className="text-xl font-bold mb-4 text-center">Learning Objectives (NCERT Class 10)</h3>
+          <h3 className="text-xl font-bold mb-4 text-center">Key Learning Points</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                 <span className="text-primary font-bold">1</span>
               </div>
-              <p className="text-sm">Understand wave motion and energy transfer</p>
+              <p className="text-sm">Wave motion and energy transfer</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                 <span className="text-primary font-bold">2</span>
               </div>
-              <p className="text-sm">Distinguish between transverse and longitudinal waves</p>
+              <p className="text-sm">Transverse vs longitudinal waves</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                 <span className="text-primary font-bold">3</span>
               </div>
-              <p className="text-sm">Apply wave equation in problem solving</p>
+              <p className="text-sm">Wave equation applications</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                 <span className="text-primary font-bold">4</span>
               </div>
-              <p className="text-sm">Analyze wave phenomena in daily life</p>
+              <p className="text-sm">Real-world wave phenomena</p>
             </div>
           </div>
         </Card>

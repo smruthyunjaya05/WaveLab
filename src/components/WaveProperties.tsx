@@ -24,11 +24,20 @@ export const WaveProperties = ({ config, onChange, isPlaying }: WavePropertiesPr
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div className="space-y-8">
+      {/* Wave Display */}
+      <div className="flex justify-center">
+        <WaveSimulator 
+          config={config}
+          isPlaying={isPlaying}
+          className="max-w-4xl"
+        />
+      </div>
+
       {/* Controls */}
-      <div className="space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card className="p-6 interactive-card">
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div>
               <label className="text-sm font-medium text-wave-amplitude mb-2 block">
                 Amplitude: {config.amplitude}px
@@ -42,7 +51,7 @@ export const WaveProperties = ({ config, onChange, isPlaying }: WavePropertiesPr
                 className="w-full"
               />
               <p className="text-xs text-muted-foreground mt-1">
-                Controls the height of the wave - how much energy it carries
+                Wave height
               </p>
             </div>
 
@@ -59,7 +68,7 @@ export const WaveProperties = ({ config, onChange, isPlaying }: WavePropertiesPr
                 className="w-full"
               />
               <p className="text-xs text-muted-foreground mt-1">
-                Number of complete waves per second - affects pitch in sound
+                Waves per second
               </p>
             </div>
 
@@ -76,24 +85,7 @@ export const WaveProperties = ({ config, onChange, isPlaying }: WavePropertiesPr
                 className="w-full"
               />
               <p className="text-xs text-muted-foreground mt-1">
-                Distance between identical points on consecutive waves
-              </p>
-            </div>
-
-            <div>
-              <label className="text-sm font-medium text-accent mb-2 block">
-                Speed: {config.speed}
-              </label>
-              <Slider
-                value={[config.speed]}
-                onValueChange={(value) => handleChange('speed', value[0])}
-                max={200}
-                min={50}
-                step={10}
-                className="w-full"
-              />
-              <p className="text-xs text-muted-foreground mt-1">
-                How fast the wave travels through the medium
+                Distance between peaks
               </p>
             </div>
           </div>
@@ -108,35 +100,30 @@ export const WaveProperties = ({ config, onChange, isPlaying }: WavePropertiesPr
             <span className="text-wave-speed mx-2">λ</span>
           </div>
           <div className="text-sm text-muted-foreground space-y-1">
-            <div><span className="text-accent">v</span> = Wave Speed</div>
+            <div><span className="text-accent">v</span> = Speed</div>
             <div><span className="text-wave-frequency">f</span> = Frequency</div>
             <div><span className="text-wave-speed">λ</span> = Wavelength</div>
           </div>
         </Card>
-      </div>
 
-      {/* Live Preview */}
-      <div className="space-y-4">
-        <WaveSimulator 
-          config={config}
-          isPlaying={isPlaying}
-        />
-        
-        <div className="grid grid-cols-2 gap-4">
-          <Card className="p-4 text-center">
-            <div className="text-2xl font-bold text-primary">
-              {(config.frequency * config.wavelength).toFixed(1)}
+        {/* Calculations */}
+        <Card className="p-6 interactive-card">
+          <h3 className="text-lg font-semibold mb-4">Current Values</h3>
+          <div className="space-y-3">
+            <div className="flex justify-between">
+              <span className="text-sm text-muted-foreground">Speed:</span>
+              <span className="text-sm font-medium">{(config.frequency * config.wavelength).toFixed(1)} px/s</span>
             </div>
-            <div className="text-sm text-muted-foreground">Wave Speed</div>
-          </Card>
-          
-          <Card className="p-4 text-center">
-            <div className="text-2xl font-bold text-accent">
-              {(1 / config.frequency).toFixed(2)}s
+            <div className="flex justify-between">
+              <span className="text-sm text-muted-foreground">Period:</span>
+              <span className="text-sm font-medium">{(1 / config.frequency).toFixed(2)}s</span>
             </div>
-            <div className="text-sm text-muted-foreground">Period</div>
-          </Card>
-        </div>
+            <div className="flex justify-between">
+              <span className="text-sm text-muted-foreground">Energy:</span>
+              <span className="text-sm font-medium">∝ A²</span>
+            </div>
+          </div>
+        </Card>
       </div>
     </div>
   );
