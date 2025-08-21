@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Wave Physics Learning Platform Design System */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - Dark Theme */
+    --background: 220 27% 8%;
+    --foreground: 210 20% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Surface Colors */
+    --card: 220 25% 12%;
+    --card-foreground: 210 20% 90%;
+    --card-hover: 220 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 20% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Colors - Wave Theme */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 27% 8%;
+    --primary-glow: 217 91% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 260 60% 60%;
+    --secondary-foreground: 220 27% 8%;
+    --secondary-glow: 260 60% 70%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent Colors */
+    --accent: 180 100% 50%;
+    --accent-foreground: 220 27% 8%;
+    --accent-glow: 180 100% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --wave-amplitude: 300 60% 65%;
+    --wave-frequency: 120 60% 65%;
+    --wave-speed: 60 60% 65%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Neutral Colors */
+    --muted: 220 20% 20%;
+    --muted-foreground: 215 15% 60%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 210 20% 90%;
 
-    --radius: 0.5rem;
+    --border: 220 20% 20%;
+    --input: 220 20% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
+    --gradient-wave: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--secondary)));
+    --gradient-surface: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 27% 4% / 0.5);
+    --shadow-wave: 0 0 30px hsl(var(--accent) / 0.4);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +126,107 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  /* Wave Animation */
+  .wave-animation {
+    background: var(--gradient-wave);
+    background-size: 200% 100%;
+    animation: wave-gradient 3s ease-in-out infinite;
+  }
+
+  .wave-pulse {
+    animation: wave-pulse 2s ease-in-out infinite;
+  }
+
+  /* Interactive Cards */
+  .interactive-card {
+    background: var(--gradient-surface);
+    border: 1px solid hsl(var(--border));
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-card);
+  }
+
+  .interactive-card:hover {
+    background: hsl(var(--card-hover));
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-wave {
+    box-shadow: var(--shadow-wave);
+  }
+
+  /* SVG Wave Path */
+  .wave-path {
+    stroke: hsl(var(--primary));
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.4));
+  }
+
+  .wave-particle {
+    fill: hsl(var(--accent));
+    filter: drop-shadow(0 0 4px hsl(var(--accent) / 0.6));
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes wave-gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes wave-pulse {
+    0%, 100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes wave-oscillate {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes particle-move {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(400px);
+    }
+  }
+
+  .animate-wave-oscillate {
+    animation: wave-oscillate 2s ease-in-out infinite;
+  }
+
+  .animate-particle-move {
+    animation: particle-move 3s linear infinite;
   }
 }
