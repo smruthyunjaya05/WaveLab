@@ -3,6 +3,8 @@ import { WaveSimulator } from "@/components/WaveSimulator";
 import { WaveProperties } from "@/components/WaveProperties";
 import { ApplicationCards } from "@/components/ApplicationCards";
 import { WaveTypes } from "@/components/WaveTypes";
+import { WaveTheory } from "@/components/WaveTheory";
+import { ConceptsBento } from "@/components/ConceptsBento";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Play, Pause } from "lucide-react";
 
@@ -63,11 +65,17 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Wave Theory Section */}
+      <WaveTheory />
+
+      {/* Interactive Concepts Bento */}
+      <ConceptsBento />
+
       {/* Wave Properties Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Wave Properties</h2>
+            <h2 className="text-4xl font-bold mb-4">Interactive Wave Properties</h2>
             <p className="text-muted-foreground text-lg">
               Explore how amplitude, frequency, and wavelength shape wave behavior
             </p>
