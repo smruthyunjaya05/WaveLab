@@ -1,4 +1,4 @@
-# 🌊 WaveLab: Interactive Wave Physics Simulator
+# WaveLab: Interactive Wave Physics Simulator
 
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6.svg)](https://www.typescriptlang.org/)
@@ -10,20 +10,11 @@
 
 ---
 
-<!-- This HTML table creates the side-by-side layout for the logo and overview -->
-<table>
-  <tr>
-    <!-- *** FIX: Changed valign to "middle" to vertically center the logo *** -->
-    <td valign="middle" width="200" align="center">
-      <img src="src/assets/home.png" alt="WaveLab Logo" width="180"/>
-    </td>
-    <td valign="top">
-      <h2>🎯 Overview</h2>
-      <p><strong>WaveLab</strong> is a modern, interactive web application built with React and TypeScript that demonstrates the fundamental principles of wave physics through engaging simulations and visualizations. The app provides a comprehensive suite of tools for understanding wave concepts, properties, and interactions.</p>
-      <p>Built with the latest web technologies including Vite for fast development, Tailwind CSS for modern styling, and shadcn/ui components for a polished user interface. WaveLab showcases advanced web development concepts including interactive simulations, responsive design, and modern UI/UX patterns.</p>
-    </td>
-  </tr>
-</table>
+## 🎯 Overview
+
+**WaveLab** is a modern, interactive web application built with React and TypeScript that demonstrates the fundamental principles of wave physics through engaging simulations and visualizations. The app provides a comprehensive suite of tools for understanding wave concepts, properties, and interactions.
+
+Built with the latest web technologies including Vite for fast development, Tailwind CSS for modern styling, and shadcn/ui components for a polished user interface. WaveLab showcases advanced web development concepts including interactive simulations, responsive design, and modern UI/UX patterns.
 
 ### ✨ Key Highlights
 - 🌊 **Interactive Wave Simulations**: Real-time wave physics simulations with adjustable parameters.
@@ -39,28 +30,28 @@
 
 ### 🏠 Home Screen
 <div align="center">
-    <img src="src/assets/home.png" alt="Home Screen" width="80%"/>
+    <img src="https://raw.githubusercontent.com/smruthyunjaya05/WaveLab/main/src/assets/home.png" alt="Home Screen" width="80%"/>
     <br/>
     <sub><strong>🏠 Home Screen:</strong> A clean, modern entry point offering various wave physics tools and concepts.</sub>
 </div>
 
 ### 🌊 Wave Concepts
 <div align="center">
-    <img src="src/assets/wave concepts.png" alt="Wave Concepts" width="80%"/>
+    <img src="https://raw.githubusercontent.com/smruthyunjaya05/WaveLab/main/src/assets/wave%20concepts.png" alt="Wave Concepts" width="80%"/>
     <br/>
     <sub><strong>🌊 Wave Concepts:</strong> Interactive exploration of fundamental wave properties and characteristics.</sub>
 </div>
 
 ### 📚 Understanding Waves
 <div align="center">
-    <img src="src/assets/understanding waves.png" alt="Understanding Waves" width="80%"/>
+    <img src="https://raw.githubusercontent.com/smruthyunjaya05/WaveLab/main/src/assets/understanding%20waves.png" alt="Understanding Waves" width="80%"/>
     <br/>
     <sub><strong>📚 Understanding Waves:</strong> Educational content and explanations of wave physics principles.</sub>
 </div>
 
 ### ⚙️ Wave Properties & Interactions
 <div align="center">
-    <img src="src/assets/interaction wave properties.png" alt="Wave Properties" width="80%"/>
+    <img src="https://raw.githubusercontent.com/smruthyunjaya05/WaveLab/main/src/assets/interaction%20wave%20properties.png" alt="Wave Properties" width="80%"/>
     <br/>
     <sub><strong>⚙️ Wave Properties & Interactions:</strong> Interactive tools for exploring wave properties and interactions.</sub>
 </div>
