@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Wave Physics Learning Platform Design System */
+/* WaveLab - Interactive Wave Physics Design System */
 @layer base {
   :root {
     /* Core Colors - Dark Theme */

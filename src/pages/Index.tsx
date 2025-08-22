@@ -25,15 +25,18 @@ const Index = () => {
         
         <div className="container mx-auto px-6 text-center z-10">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              Waves
-            </h1>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                WaveLab
+              </h1>
+            </div>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              The Study of Oscillations & Energy Transfer
+              Interactive Wave Physics Learning Laboratory
             </p>
             <p className="text-lg max-w-3xl mx-auto mb-8">
-              Discover how waves carry energy through space and matter, from the ripples on water 
-              to the light that reaches your eyes and the sound waves that bring music to your ears.
+              Master wave physics through hands-on experiments and visual simulations. 
+              Explore how waves carry energy through space and matter, from water ripples 
+              to electromagnetic radiation.
             </p>
           </div>
 
