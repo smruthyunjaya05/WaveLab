@@ -87,20 +87,13 @@ export const WaveSimulator = ({ config, isPlaying, className }: WaveSimulatorPro
   }, [config, isPlaying]);
 
   return (
-    <div className={cn("relative bg-card rounded-xl p-6 shadow-card", className)}>
+    <div className={cn("bg-card rounded-xl p-6 shadow-card", className)}>
       <canvas
         ref={canvasRef}
         width={800}
         height={200}
         className="w-full h-auto rounded-lg bg-gradient-to-r from-background/50 to-muted/30"
       />
-      
-      {/* Wave Labels */}
-      <div className="absolute top-2 left-4 text-sm text-muted-foreground">
-        <div>Amplitude: {config.amplitude}px</div>
-        <div>Frequency: {config.frequency} Hz</div>
-        <div>Wavelength: {config.wavelength}px</div>
-      </div>
     </div>
   );
 };

@@ -4,17 +4,17 @@ import { BookOpen, Lightbulb, Target } from "lucide-react";
 
 export const WaveTheory = () => {
   return (
-    <section className="py-20 bg-muted/20">
+    <section className="py-12 bg-muted/20">
       <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">Understanding Waves</h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-xl">
               Fundamental concepts of wave physics
             </p>
           </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-fr">
           
           {/* Main Definition - Large Card */}
           <Card className="interactive-card p-6 md:col-span-2 lg:col-span-2 row-span-2">
@@ -23,13 +23,13 @@ export const WaveTheory = () => {
               <h3 className="text-2xl font-bold">What are Waves?</h3>
             </div>
             <div className="space-y-4">
-              <p className="text-lg">
+              <p className="text-xl">
                 A wave is a disturbance that travels through a medium or space, transferring energy 
                 from one point to another without transferring matter.
               </p>
               <div className="bg-primary/10 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Key Characteristics:</h4>
-                <ul className="space-y-2 text-sm">
+                <h4 className="font-semibold mb-2 text-lg">Key Characteristics:</h4>
+                <ul className="space-y-2 text-base">
                   <li>• Waves carry energy, not matter</li>
                   <li>• They exhibit reflection, refraction, and interference</li>
                   <li>• Can be mechanical or electromagnetic</li>

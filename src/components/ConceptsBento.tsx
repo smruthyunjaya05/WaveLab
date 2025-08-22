@@ -88,17 +88,17 @@ export const ConceptsBento = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-12">
       <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">Wave Concepts Explorer</h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-xl">
               Interactive exploration of wave phenomena
             </p>
           </div>
 
         {/* Main Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-6">
           
           {/* Hero Concept Card */}
           <Card className="interactive-card p-6 md:col-span-2 lg:col-span-3 row-span-2">
@@ -109,32 +109,32 @@ export const ConceptsBento = () => {
                 <Badge variant="outline">Physics</Badge>
               </div>
             </div>
-            <p className="text-lg mb-4">
+            <p className="text-xl mb-4">
               Waves are disturbances that transfer energy through space or matter without transferring the matter itself.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-sm">Energy transfer without matter transfer</span>
+                <span className="text-base">Energy transfer without matter transfer</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-sm">Follows mathematical wave equation</span>
+                <span className="text-base">Follows mathematical wave equation</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-sm">Exhibits reflection, refraction, interference</span>
+                <span className="text-base">Exhibits reflection, refraction, interference</span>
               </div>
             </div>
           </Card>
 
           {/* Wave Types */}
           <Card className="interactive-card p-4 lg:col-span-1">
-            <h4 className="font-semibold mb-2">Transverse</h4>
-            <p className="text-xs text-muted-foreground mb-2">
+            <h4 className="font-semibold mb-2 text-base">Transverse</h4>
+            <p className="text-sm text-muted-foreground mb-2">
               Particle motion ⊥ to wave direction
             </p>
-            <div className="text-xs space-y-1">
+            <div className="text-sm space-y-1">
               <div>• Light waves</div>
               <div>• Water waves</div>
               <div>• EM radiation</div>
@@ -142,11 +142,11 @@ export const ConceptsBento = () => {
           </Card>
 
           <Card className="interactive-card p-4 lg:col-span-1">
-            <h4 className="font-semibold mb-2">Longitudinal</h4>
-            <p className="text-xs text-muted-foreground mb-2">
+            <h4 className="font-semibold mb-2 text-base">Longitudinal</h4>
+            <p className="text-sm text-muted-foreground mb-2">
               Particle motion ∥ to wave direction
             </p>
-            <div className="text-xs space-y-1">
+            <div className="text-sm space-y-1">
               <div>• Sound waves</div>
               <div>• P-waves</div>
               <div>• Compression waves</div>
@@ -154,11 +154,11 @@ export const ConceptsBento = () => {
           </Card>
 
           <Card className="interactive-card p-4 lg:col-span-1">
-            <h4 className="font-semibold mb-2">Mechanical</h4>
-            <p className="text-xs text-muted-foreground mb-2">
+            <h4 className="font-semibold mb-2 text-base">Mechanical</h4>
+            <p className="text-sm text-muted-foreground mb-2">
               Requires medium
             </p>
-            <div className="text-xs space-y-1">
+            <div className="text-sm space-y-1">
               <div>• Sound</div>
               <div>• Water</div>
               <div>• Seismic</div>
@@ -167,17 +167,17 @@ export const ConceptsBento = () => {
 
           {/* Wave Equation */}
           <Card className="interactive-card p-6 md:col-span-2 lg:col-span-2">
-            <h4 className="font-semibold mb-4 flex items-center gap-2">
-              <Zap className="text-accent" size={20} />
+            <h4 className="font-bold mb-4 flex items-center gap-2 text-xl">
+              <Zap className="text-accent" size={24} />
               The Universal Wave Equation
             </h4>
             <div className="bg-gradient-primary/10 p-4 rounded-lg text-center">
-              <div className="text-3xl font-bold mb-2">v = f × λ</div>
-              <div className="text-sm text-muted-foreground">
+              <div className="text-4xl font-bold mb-2">v = f × λ</div>
+              <div className="text-base text-muted-foreground">
                 Speed = Frequency × Wavelength
               </div>
             </div>
-            <p className="text-sm mt-3">
+            <p className="text-base mt-3">
               This equation applies to all types of waves and is fundamental to understanding wave behavior.
             </p>
           </Card>
@@ -185,16 +185,16 @@ export const ConceptsBento = () => {
         </div>
 
         {/* Wave Properties Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           {waveProperties.map((prop, index) => (
-            <Card key={index} className="interactive-card p-4">
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="font-semibold">{prop.property}</h4>
-                <Badge variant="outline" className="text-xs">{prop.symbol}</Badge>
+            <Card key={index} className="interactive-card p-5">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-semibold text-lg">{prop.property}</h4>
+                <Badge variant="outline" className="text-sm">{prop.symbol}</Badge>
               </div>
-              <p className="text-sm text-muted-foreground mb-2">{prop.description}</p>
-              <div className="text-xs space-y-1">
-                <div className="font-medium">{prop.relation}</div>
+              <p className="text-base text-muted-foreground mb-3">{prop.description}</p>
+              <div className="text-sm space-y-1">
+                <div className="font-semibold">{prop.relation}</div>
                 <div className="text-muted-foreground">Unit: {prop.unit}</div>
               </div>
             </Card>
